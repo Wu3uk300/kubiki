@@ -1,0 +1,16 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "postgresql://postgres:VfRc2003@localhost:5432/kubiki?schema=public"
+  },
+  "build": {
+    "env": {
+      "DATABASE_URL": "postgresql://postgres:VfRc2003@localhost:5432/kubiki?schema=public"
+    }
+  }
+}
