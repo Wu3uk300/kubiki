@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "jest.setup.js",
-    "jest.config.js"
+    "jest.config.js",
+    "src/globals.d.ts" // Добавляем путь к вашему файлу типов
   ],
   "exclude": ["node_modules"]
 }
