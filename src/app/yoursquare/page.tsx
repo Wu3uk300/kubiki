@@ -6,8 +6,7 @@ import { redirect } from "next/navigation";
 import Square from "@/components/Square";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-
-const prisma = new PrismaClient();
+import prisma from "@/prisma";
 
 const yourSquare = async () => {
   const { isAuthenticated, getUser } = getKindeServerSession();

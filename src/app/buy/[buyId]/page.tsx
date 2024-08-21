@@ -7,17 +7,7 @@ import { join } from "path";
 import { writeFile } from "fs/promises";
 import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
-
-let prisma: PrismaClient;
-
-if (process.env.NODE_ENV === "production") {
-  prisma = new PrismaClient();
-} else {
-  if (!globalThis.prisma) {
-    globalThis.prisma = new PrismaClient();
-  }
-  prisma = globalThis.prisma;
-}
+import prisma from "@/prisma";
 
 async function Buy({ params }: { params: { buyId: string } }) {
   const { isAuthenticated, getUser } = getKindeServerSession();

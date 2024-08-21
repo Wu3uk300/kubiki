@@ -1,8 +1,7 @@
 import styles from "@/styles/Mapper.module.css";
 import Square from "./Square";
 import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "@/prisma";
 
 const Mapper = async ({ params }: { params: { roomId: string } }) => {
   const roomNumber = parseInt(params.roomId);

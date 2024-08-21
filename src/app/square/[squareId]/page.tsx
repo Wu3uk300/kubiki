@@ -5,7 +5,7 @@ import styles from "@/styles/SquarePage.module.css";
 import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
 
-const prisma = new PrismaClient();
+import prisma from "@/prisma";
 async function Square({ params }: { params: { squareId: string } }) {
   const { getUser, getPermission } = getKindeServerSession();
 
