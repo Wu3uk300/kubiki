@@ -1,0 +1,59 @@
+.dataFields {
+  border: 5px solid rgb(0, 0, 0);
+  width: 60%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: rgb(255, 246, 232);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.header {
+  font-size: 20px;
+  text-align: center;
+}
+.mainTextInput {
+  margin-top: 10px;
+  border: 1px solid lightgray;
+  width: 700px;
+  padding: 10px 20px 10px 20px;
+}
+.mainTextInput:focus {
+  outline: none;
+}
+.container {
+  background-color: rgb(232, 255, 246);
+  min-height: 100vh;
+  padding-top: 20px;
+  min-height: 100vh;
+}
+.additionalTextInput {
+  margin-top: 10px;
+  border: 1px solid lightgray;
+  width: 700px;
+  padding: 10px 20px 5px 20px;
+  height: 120px;
+  resize: none;
+}
+.additionalTextInput:focus {
+  outline: none;
+}
+.SbmtBtn {
+  background-color: rgb(246, 232, 255);
+  border: none;
+  padding: 10px 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+.SbmtBtn:hover {
+  background-color: rgb(243, 224, 255);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.selector {
+  margin-left: 20px;
+}
+.backBtn {
+  margin-left: 100px;
+}

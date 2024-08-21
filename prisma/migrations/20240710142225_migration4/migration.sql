@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Square" ALTER COLUMN "owner" SET DATA TYPE TEXT;

@@ -1,0 +1,10 @@
+.container {
+  background-color: rgb(232, 255, 246);
+  min-height: 100vh;
+}
+.header {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}

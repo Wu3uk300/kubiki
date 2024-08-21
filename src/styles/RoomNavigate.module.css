@@ -1,0 +1,21 @@
+.unactiveRoom {
+  color: white;
+  width: fit-content;
+}
+.activeRoom {
+  color: rgb(255, 184, 184);
+  width: fit-content;
+}
+.roomLink {
+  width: fit-content;
+}
+.rooms {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  justify-content: space-around;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}

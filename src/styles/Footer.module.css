@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+/* Адаптация для маленьких экранов */
+@media screen and (max-width: 600px) {
+  .container {
+    height: 200px;
+    font-size: 24px; /* Уменьшаем размер шрифта на маленьких экранах */
+    padding: 0 20px; /* Добавляем внутренние отступы для лучшего внешнего вида */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+}
+
+/* Адаптация для средних экранов */
+@media screen and (min-width: 601px) and (max-width: 1199px) {
+  .container {
+    height: 220px;
+    font-size: 32px; /* Немного уменьшаем размер шрифта на средних экранах */
+  }
+}
+
+/* Адаптация для больших экранов */
+@media screen and (min-width: 1200px) {
+  .container {
+    height: 250px;
+    font-size: 40px; /* Оставляем большой размер шрифта */
+  }
+}
