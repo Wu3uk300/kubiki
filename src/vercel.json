@@ -6,11 +6,11 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "postgresql://postgres:VfRc2003@localhost:5432/kubiki?schema=public"
+    "DATABASE_URL": "postgresql://postgres.ntmfwqxhrmgreerzwryl:VfRc2003masha@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
   },
   "build": {
     "env": {
-      "DATABASE_URL": "postgresql://postgres:VfRc2003@localhost:5432/kubiki?schema=public"
+      "DATABASE_URL": "postgresql://postgres.ntmfwqxhrmgreerzwryl:VfRc2003masha@aws-0-eu-central-1.pooler.supabase.com:6543/postgres"
     }
   }
 }
