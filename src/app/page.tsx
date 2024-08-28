@@ -3,7 +3,7 @@ import styles from "../styles/HomePage.module.css";
 import logo from "../images/Kubiki.jpg";
 import Link from "next/link";
 import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
