@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/YourSquares.module.css";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import Square from "@/components/Square";
 import Link from "next/link";
