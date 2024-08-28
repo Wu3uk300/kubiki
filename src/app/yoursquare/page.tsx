@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/YourSquares.module.css";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { PrismaClient } from "@prisma/client";
+
 import { redirect } from "next/navigation";
 import Square from "@/components/Square";
 import Link from "next/link";
