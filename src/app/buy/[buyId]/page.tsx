@@ -2,8 +2,6 @@ import NavBar from "@/components/NavBar";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import styles from "@/styles/BuyPage.module.css";
-import { join } from "path";
-import { writeFile } from "fs/promises";
 import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
 import prisma from "@/prisma";
@@ -30,29 +28,9 @@ async function Buy({ params }: { params: { buyId: string } }) {
 
   const buyNumber = parseInt(params.buyId);
 
-  const userId = await prisma.counter.findUnique({
-    where: {
-      User: user?.id,
-    },
-  });
-
-  if (userId === null) {
-    await prisma.counter.create({
-      data: {
-        User: user?.id as string,
-        Counter: 0,
-      },
-    });
-  }
-
   const changeForm = async (formData: FormData) => {
     "use server";
-    const counter = await prisma.counter.findUnique({
-      where: {
-        User: user?.id,
-      },
-    });
-    const counterNumber = counter?.Counter as number;
+
     const mainContent = formData.get("mainText");
     const additionalContent = formData.get("additionalText");
     const selectContent = formData.get("selectPublic");
@@ -64,58 +42,18 @@ async function Buy({ params }: { params: { buyId: string } }) {
       booleanContent = true;
     }
 
-    const file: File | null = formData.get("file") as unknown as File;
-    if (!file) {
-      await prisma.square.update({
-        where: { id: buyNumber },
-        data: {
-          availability: false,
-          content: mainContent as string,
-          addContent: additionalContent as string,
-          owner: user?.id as string,
-          public: booleanContent,
-          ownerName: user?.given_name,
-        },
-      });
-      redirect(`/room/${redirectExact}`);
-    } else {
-      await prisma.counter.update({
-        where: { User: user?.id },
-        data: { Counter: counterNumber + 1 },
-      });
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-      let dataType;
-
-      if (file.type === "image/png" || file.type === "image/jpeg") {
-        dataType = "png";
-      }
-      const fileName = `${user?.id}_${params.buyId}_${counterNumber}.${dataType}`;
-
-      const path = join(
-        "D:",
-        "tslern",
-        "kubiki",
-        "src",
-        "images",
-        "userFiles",
-        fileName
-      );
-      await writeFile(path, buffer);
-
-      await prisma.square.update({
-        where: { id: buyNumber },
-        data: {
-          availability: false,
-          content: mainContent as string,
-          addContent: additionalContent as string,
-          owner: user?.id as string,
-          public: booleanContent,
-          ownerName: user?.given_name,
-        },
-      });
-      redirect(`/room/${redirectExact}`);
-    }
+    await prisma.square.update({
+      where: { id: buyNumber },
+      data: {
+        availability: false,
+        content: mainContent as string,
+        addContent: additionalContent as string,
+        owner: user?.id as string,
+        public: booleanContent,
+        ownerName: user?.given_name,
+      },
+    });
+    redirect(`/room/${redirectExact}`);
   };
 
   return (
@@ -153,13 +91,7 @@ async function Buy({ params }: { params: { buyId: string } }) {
               />
               <br />
               <br />
-              <label>
-                Выберите файл, фото или видео которые вы хотите хранить
-              </label>
-              <br />
-              <input className={styles.fileInput} type="file" name="file" />
-              <br />
-              <br />
+
               <label>
                 Хотите ли вы сделать кубик доступным всем для просмотра?
               </label>
