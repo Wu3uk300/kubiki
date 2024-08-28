@@ -1,5 +1,4 @@
 import NavBar from "@/components/NavBar";
-import { PrismaClient } from "@prisma/client";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import styles from "@/styles/BuyPage.module.css";
