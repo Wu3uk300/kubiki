@@ -54,36 +54,36 @@ async function Square({ params }: { params: { squareId: string } }) {
             </div>
           )}
         </div>
-        {data?.public ||
-          data?.owner === user?.id ||
-          (perm?.isGranted && (
-            <div className={styles.squareInfo}>
-              <div className={styles.squareInfoContent}>
-                <div className={styles.squareInfoHeader}>Информация:</div>
+        {data?.public || data?.owner === user?.id || perm?.isGranted ? (
+          <div className={styles.squareInfo}>
+            <div className={styles.squareInfoContent}>
+              <div className={styles.squareInfoHeader}>Информация:</div>
 
-                <div className={styles.squareInfoOwner}>
-                  <b> Владелец:</b> {data?.ownerName}
-                </div>
+              <div className={styles.squareInfoOwner}>
+                <b> Владелец:</b> {data?.ownerName}
+              </div>
 
-                <div className={styles.squareInfoPublic}>
-                  <b> Квадрат публичный:</b> {data?.public ? "Да" : "Нет"}
-                </div>
+              <div className={styles.squareInfoPublic}>
+                <b> Квадрат публичный:</b> {data?.public ? "Да" : "Нет"}
+              </div>
 
-                <div className={styles.squareInfoSymbols}>
-                  <b> Кол-во символов:</b> {data?.addContent?.length}
-                </div>
+              <div className={styles.squareInfoSymbols}>
+                <b> Кол-во символов:</b> {data?.addContent?.length}
+              </div>
 
-                <div className={styles.squareInfoWords}>
-                  <b>Кол-во слов: </b>
-                  {words?.length}
-                </div>
+              <div className={styles.squareInfoWords}>
+                <b>Кол-во слов: </b>
+                {words?.length}
+              </div>
 
-                <div className={styles.squareInfoUpdatedAt}>
-                  <b>Измененно:</b> {data?.updatedAt?.toLocaleString()}
-                </div>
+              <div className={styles.squareInfoUpdatedAt}>
+                <b>Измененно:</b> {data?.updatedAt?.toLocaleString()}
               </div>
             </div>
-          ))}
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
       <Footer />
     </div>
