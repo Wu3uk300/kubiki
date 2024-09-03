@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "../styles/normalize.css";
-const font = Rubik({ subsets: ["latin"], weight: "400" });
+const font = Raleway({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
   title: "Kubiki",
