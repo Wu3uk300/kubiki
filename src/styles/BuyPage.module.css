@@ -15,7 +15,7 @@
 .mainTextInput {
   margin-top: 10px;
   border: 1px solid lightgray;
-  width: 700px;
+  width: 80%;
   padding: 10px 20px 10px 20px;
 }
 .mainTextInput:focus {

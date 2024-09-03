@@ -66,7 +66,6 @@ async function Buy({ params }: { params: { buyId: string } }) {
         </div>
 
         <div className={styles.wholeContent}>
-          {" "}
           <div className={styles.header}>Заполните пожалуйста поля</div>
           <div className={styles.dataFields}>
             <form action={changeForm}>
