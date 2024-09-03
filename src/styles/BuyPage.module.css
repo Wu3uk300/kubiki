@@ -57,6 +57,8 @@
   transform: scale(1.03);
 }
 .selector {
+  margin-top: 20px;
+  margin-bottom: 10px;
   background-color: #ffffff; /* Цвет фона */
   color: #000; /* Цвет текста */
   border: 1px solid #ddd; /* Цвет и толщина границы */
