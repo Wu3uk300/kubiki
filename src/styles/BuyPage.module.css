@@ -7,6 +7,10 @@
   background-color: rgb(255, 246, 232);
   color: rgb(0, 0, 0);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .header {
   font-size: 20px;
