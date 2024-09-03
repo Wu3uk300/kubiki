@@ -77,3 +77,8 @@
 .backBtn {
   margin-left: 100px;
 }
+@media screen and (max-width: 600px) {
+  .dataFields {
+    width: 80%;
+  }
+}
