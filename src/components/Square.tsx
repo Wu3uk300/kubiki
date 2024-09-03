@@ -78,12 +78,8 @@ const Square = ({ info }: SquareProps) => {
           }
         >
           <div className={styles.contentText}>
-            <div className={styles.contentHeader}>
-              {truncateText(info.content)}
-            </div>
-            <div className={styles.contentAddText}>
-              {truncateText(info.addContent)}
-            </div>
+            <div className={styles.contentHeader}></div>
+            <div className={styles.contentAddText}></div>
           </div>
         </div>
       </Link>
@@ -107,12 +103,8 @@ const Square = ({ info }: SquareProps) => {
         >
           {user?.id === info.owner || perm === "square:delete" ? (
             <div className={styles.contentText}>
-              <div className={styles.contentHeader}>
-                {truncateText(info.content)}
-              </div>
-              <div className={styles.contentAddText}>
-                {truncateText(info.addContent)}
-              </div>
+              <div className={styles.contentHeader}></div>
+              <div className={styles.contentAddText}></div>
             </div>
           ) : (
             <div className={styles.privateNotAvaliable}>
@@ -123,9 +115,7 @@ const Square = ({ info }: SquareProps) => {
                 height={50}
                 alt="padlock"
               ></Image>
-              <div className={styles.privateText}>
-                Этот кубик занят, но его содержимое доступно только владельцу!
-              </div>
+              <div className={styles.privateText}></div>
             </div>
           )}
         </div>
