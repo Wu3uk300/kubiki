@@ -1,18 +1,18 @@
 .squareParams {
   margin-right: 20px;
   margin-top: 20px;
-  width: 100px;
+  width: 50px;
 }
 
 .yourSquare {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(248, 241, 255);
   border: 2px solid rgb(0, 47, 255);
 }
 .squareAvailable {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(255, 255, 255);
   border: 1px solid lightgray;
   display: flex;
@@ -36,14 +36,14 @@
   margin-bottom: 20px;
 }
 .squareNotAvailable {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(239, 255, 254);
   border: 1px solid lightgray;
 }
 .squareNotPublic {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(99, 99, 99);
   border: 1px solid rgb(0, 0, 0);
   color: white;

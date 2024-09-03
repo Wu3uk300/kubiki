@@ -54,13 +54,7 @@ const Square = ({ info }: SquareProps) => {
             className={anim ? styles.isAvailableActive : styles.isAvailable}
           ></div>
 
-          <div>
-            {anim ? (
-              <Image src={gif} alt="gif" width={50} height={50}></Image>
-            ) : (
-              <Image src={pic} alt="pic" width={50} height={50}></Image>
-            )}
-          </div>
+          <div>{info.id}</div>
         </div>
       </Link>
     </div>
