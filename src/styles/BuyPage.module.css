@@ -82,3 +82,9 @@
     width: 80%;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .backBtn {
+    display: none;
+  }
+}
