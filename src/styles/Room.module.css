@@ -8,3 +8,8 @@
   font-size: 22px;
   font-weight: bold;
 }
+.mapper {
+  display: flex;
+  justify-content: center;
+  align-items: centers;
+}
