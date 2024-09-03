@@ -54,7 +54,7 @@ const Square = ({ info }: SquareProps) => {
             className={anim ? styles.isAvailableActive : styles.isAvailable}
           ></div>
 
-          <div>{info.id}</div>
+          <div className={styles.numbered}>{info.id}</div>
         </div>
       </Link>
     </div>
