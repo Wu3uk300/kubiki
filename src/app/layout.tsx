@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "../styles/normalize.css";
-const font = Playfair_Display({ subsets: ["latin"], weight: "400" });
+const font = Raleway({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Kubiki",
