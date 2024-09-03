@@ -50,9 +50,9 @@ const Square = ({ info }: SquareProps) => {
           onMouseLeave={() => setAnim(false)}
           className={styles.squareAvailable}
         >
-          <div className={anim ? styles.isAvailableActive : styles.isAvailable}>
-            Кубик свободен, его можно купить
-          </div>
+          <div
+            className={anim ? styles.isAvailableActive : styles.isAvailable}
+          ></div>
 
           <div>
             {anim ? (
