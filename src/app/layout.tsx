@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-
-import { Figtree } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "../styles/normalize.css";
-const inter = Figtree({ subsets: ["latin"], weight: "400" });
+const font = Playfair_Display({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Kubiki",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <main>{children}</main>
       </body>
     </html>
