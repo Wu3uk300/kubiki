@@ -108,13 +108,6 @@ const Square = ({ info }: SquareProps) => {
             </div>
           ) : (
             <div className={styles.privateNotAvaliable}>
-              <Image
-                className={styles.padlock}
-                src={padlock}
-                width={50}
-                height={50}
-                alt="padlock"
-              ></Image>
               <div className={styles.privateText}></div>
             </div>
           )}
