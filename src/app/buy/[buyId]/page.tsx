@@ -14,11 +14,11 @@ async function Buy({ params }: { params: { buyId: string } }) {
 
   let redirectExact = 0;
 
-  if (redirectRoom <= 9) {
+  if (redirectRoom <= 320) {
     redirectExact = 1;
-  } else if (redirectRoom > 9 && redirectRoom <= 18) {
+  } else if (redirectRoom > 320 && redirectRoom <= 641) {
     redirectExact = 2;
-  } else if (redirectRoom > 18 && redirectRoom <= 27) {
+  } else if (redirectRoom > 641 && redirectRoom <= 960) {
     redirectExact = 3;
   }
 
